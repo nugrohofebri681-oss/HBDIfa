@@ -1,6 +1,6 @@
-# A Little Place in Time — Birthday OS for Ifa
+# A Little Place in Time — Birthday OS
 
-**Birthday edition:** 17 November 2026  
+**Birthday edition:**
 **Konsep:** Elegant & Nostalgic  
 **Versi:** 1.0 preview, siap dicoba lokal.
 
@@ -24,12 +24,6 @@ Seluruh kode, desain, teks, serta ilustrasi CSS berada di dalam **satu file `ind
   6. One Last Wish: kartu penutup yang bisa disimpan sebagai PNG.
 - Tampilan adaptif untuk laptop & HP, navigasi keyboard, reduced motion, dan bunyi singkat opsional.
 - Menyimpan status intro/ruang yang pernah dibuka di browser setempat, tanpa mengirim data ke server.
-
-## Catatan privasi
-
-File ini berisi surat dan cerita personal. **Jangan mengunggahnya ke repository atau situs publik** tanpa memastikan Ifa dan pemilik cerita setuju isi tersebut dipublikasikan. Mode offline paling aman untuk pratinjau pribadi.
-
-## Catatan konten
 
 - Isi surat memakai versi revisi pengguna, termasuk bagian *“Kita masih temenan kan yaa, hehe..”*.
 - Film dan buku direpresentasikan oleh ilustrasi abstrak buatan CSS, **bukan poster resmi** atau foto pribadi.
