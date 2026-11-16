@@ -1,0 +1,106 @@
+
+/* Ifa.OS · The Little Phone — responsive birthday-device experience */
+body{background:radial-gradient(circle at 9% 20%,#ecd9d7,#f4ecdf 41%,#eadbcc 100%)}
+.ifa-os{max-width:1500px;margin:12px auto 46px;padding:0 clamp(14px,3vw,45px);}
+.phone-presentation{display:grid;grid-template-columns:minmax(180px,1fr) minmax(0,406px) minmax(175px,1fr);align-items:center;gap:clamp(17px,3.5vw,52px);min-height:min(900px,100vh);}
+.phone-editorial{padding:14px 0;color:#756158}
+.phone-kicker{font-size:10px;color:#9e7277;font-weight:750;letter-spacing:.24em}
+.phone-editorial h1{font:400 clamp(41px,4.5vw,71px)/1.04 Georgia,serif;color:#473a36;letter-spacing:-.065em;margin:23px 0}
+.phone-editorial h1 em{color:#a3757e;font-weight:400}
+.phone-editorial p{max-width:320px;font-size:13px;line-height:1.95;color:#8e7a70}
+.phone-editorial-line{margin-top:44px;font-size:10px;letter-spacing:.13em;line-height:2.1;color:#a28b7a}
+.phone-editorial-line span{padding:0 8px;color:#b88c88}
+.phone-editorial-right{align-self:center}
+.phone-side-card{display:flex;flex-direction:column;gap:3px;border-bottom:1px solid #d7c4b7;padding:20px 0}
+.phone-side-card span{font-size:24px}
+.phone-side-card strong{font:400 19px Georgia,serif;color:#5c4944}
+.phone-side-card small{font-size:12px;line-height:1.75;color:#958077}
+.phone-original-link{display:block;margin-top:14px;padding:9px 0;border:none;border-bottom:1px solid #bca299;color:#835d65;background:transparent;font-size:12px;text-align:left;font-weight:650;cursor:pointer}
+.phone-original-link:hover{color:#5a353d}
+.phone-frame{width:100%;max-width:406px;height:min(840px,calc(100dvh - 36px));min-height:650px;justify-self:center;border-radius:52px;border:7px solid #69544c;box-shadow:0 28px 85px #624b4270,0 9px 30px #472e2940,inset 0 0 0 2px #a99687;position:relative;padding:5px;background:#806b61;isolation:isolate}
+.phone-frame::before{content:"";position:absolute;left:-10px;top:144px;width:3px;height:60px;background:#7c6862;border-radius:3px 0 0 3px}
+.phone-frame::after{content:"";position:absolute;right:-10px;top:201px;width:3px;height:81px;background:#79655c;border-radius:0 3px 3px 0}
+.phone-screen{height:100%;width:100%;position:relative;overflow:hidden;border-radius:39px;background:linear-gradient(165deg,#e9c6c5 0%,#f7e3dc 37%,#fbf1e8 72%,#e6d1c1 100%);display:flex;flex-direction:column}
+.phone-wallpaper{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.phone-wallpaper span{position:absolute;width:550px;height:550px;left:-85px;top:-178px;border-radius:50%;background:radial-gradient(circle at 50% 45%,#f6c8ba 5%,#e0b5bb 36%,#e4c5c0 56%,#f0ded1 75%,transparent 76%);opacity:.84}
+.phone-wallpaper i{position:absolute;width:530px;height:385px;left:-80px;bottom:32%;transform:rotate(-27deg);border-radius:50%;background:linear-gradient(110deg,#f6e8d8b0,#fbf8ec78);filter:blur(15px)}
+.phone-wallpaper b{position:absolute;width:190px;height:190px;right:-70px;bottom:3%;border:1px solid #ffffff88;border-radius:50%;box-shadow:0 0 60px #fff7ebaa;opacity:.65}
+.phone-status{position:relative;z-index:4;flex:none;height:45px;display:flex;align-items:flex-start;justify-content:space-between;padding:12px 25px 0;gap:6px;font-size:13px;color:#554741;font-weight:750}
+.phone-island{position:absolute;left:50%;top:5px;transform:translateX(-50%);width:103px;height:26px;background:#322c2a;border-radius:99px;box-shadow:inset 0 -1px #73625e}
+.phone-status-icons{font-family:Arial,sans-serif;font-size:13px;letter-spacing:-1px;white-space:nowrap}
+.phone-home{position:relative;z-index:2;flex:1;min-height:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#b59087 transparent;padding:34px 22px 9px}
+.phone-headline{display:flex;flex-direction:column;gap:5px;color:#5c433f;text-shadow:0 1px 0 #fff3}
+.phone-headline>span{font-size:10px;letter-spacing:.17em;font-weight:800;color:#976c6c}
+.phone-headline strong{font:400 46px/.99 Georgia,'Times New Roman',serif;letter-spacing:-.055em}
+.phone-headline strong em{font-size:29px;font-weight:400;color:#a66c78}
+.phone-headline small{font-size:12px;color:#866760;margin-top:7px}
+.phone-notification{width:100%;display:flex;align-items:center;text-align:left;gap:11px;border-radius:18px;border:1px solid #fffaf4c9;padding:14px 13px;margin:24px 0 27px;box-shadow:0 8px 23px #95756a22;background:#fffaf1bf;backdrop-filter:blur(7px)}
+.phone-notification .phone-notif-emoji{width:39px;height:39px;background:#f0d2d4;display:grid;place-items:center;border-radius:12px;font-size:21px;flex:none}
+.phone-notification span:nth-child(2){flex:1;min-width:0}
+.phone-notification strong,.phone-notification small{display:block}
+.phone-notification strong{font-size:12px;color:#674f51}
+.phone-notification small{font-size:10px;color:#917a72;margin-top:3px}
+.phone-notification span:last-child{font-size:24px;color:#a57e81}
+.phone-section-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px}
+.phone-section-row span:first-child{font-size:13px;font-weight:800;color:#66504e}
+.phone-section-row span:last-child{font-size:10px;color:#8e7373}
+.phone-page[hidden]{display:none!important}
+.phone-app-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:19px 7px;margin-bottom:6px}
+.phone-app{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:7px;min-width:0;border:0;padding:0 2px;color:#63524d;background:transparent;cursor:pointer;transition:transform .18s}
+.phone-app:hover{transform:translateY(-3px)}
+.phone-app:active{transform:scale(.96)}
+.phone-app-icon{width:min(62px,100%);height:59px;border-radius:17px;display:grid;place-items:center;font-size:27px;box-shadow:inset 0 1px #fff9,0 7px 16px #8e676329;border:1px solid #ffffff91;background:linear-gradient(145deg,#ffe8e6,#e4c1c7)}
+.phone-app:nth-child(4n + 2) .phone-app-icon{background:linear-gradient(145deg,#e8ecdd,#c9d6c9)}
+.phone-app:nth-child(4n + 3) .phone-app-icon{background:linear-gradient(145deg,#fff0d7,#ebc9aa)}
+.phone-app:nth-child(4n + 4) .phone-app-icon{background:linear-gradient(145deg,#eae5f3,#cec4dd)}
+.phone-app-name{font-size:10px;text-align:center;line-height:1.2;font-weight:770;max-width:100%;overflow-wrap:anywhere}
+.phone-app small{font-size:9px;color:#8d7370;text-align:center;line-height:1.1}
+.phone-app .phone-secret-icon-unlocked{background:linear-gradient(145deg,#e6ebd8,#d2bb99)}
+.phone-unlock-note{margin:27px 0 0;padding:14px;background:#fff9f3ba;border-radius:14px;border:1px solid #ecd9cb;font-size:11px!important;line-height:1.6!important;color:#735c59!important;text-align:center}
+.phone-dock{position:relative;z-index:2;flex:none;padding:9px 14px 2px}
+.phone-dock-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;background:#fff9f1a6;border:1px solid #fff6efde;border-radius:24px;padding:11px 7px 8px;box-shadow:0 8px 24px #70504417;backdrop-filter:blur(14px)}
+.phone-dock .phone-app{gap:5px}
+.phone-dock .phone-app-icon{width:52px;height:51px;font-size:24px}
+.phone-dock .phone-app-name{font-size:9px}
+.phone-controlbar{position:relative;z-index:2;flex:none;padding:4px 0 8px}
+.phone-page-controls{display:flex;align-items:center;justify-content:center;gap:12px;height:26px}
+.phone-page-controls>button:not(.phone-page-dot){border:0;background:transparent;color:#7b5e5a;font-size:22px;padding:0 7px;line-height:1}
+.phone-page-dot{width:7px;height:7px;border-radius:50%;border:0;background:#a98d8b66;padding:0;cursor:pointer}
+.phone-page-dot.active{background:#8f646a;width:17px;border-radius:20px}
+.phone-homebar{height:5px;width:114px;background:#685550;border:0;border-radius:10px;display:block;margin:2px auto 0;cursor:pointer}
+.phone-lock{position:absolute;z-index:10;inset:0;background:linear-gradient(170deg,#bb8b98,#e9c7c2 43%,#f8e6d9 78%,#f5e0d2);display:flex;flex-direction:column;align-items:center;text-align:center;padding:26px 25px 38px;transition:transform .7s cubic-bezier(.2,.85,.2,1),opacity .5s}
+.phone-lock.hidden-unlocked{transform:translateY(-105%);opacity:0;pointer-events:none}
+.phone-lock:before{content:"";position:absolute;width:400px;height:400px;border:1px solid #fff7e3aa;border-radius:50%;top:-160px;right:-150px;box-shadow:0 0 70px #fff5e55c}
+.phone-lock-spacer{flex:1;min-height:50px}
+.phone-lock-date{font-size:15px;color:#fffaf0;font-weight:650;text-shadow:0 1px 8px #966b78}
+.phone-lock-time{font:400 clamp(64px,8vw,89px)/1.05 Georgia,serif;color:#fffaf1;text-shadow:0 3px 16px #8d596747;margin:8px 0 28px}
+.phone-lock-icon{width:115px;height:115px;display:grid;place-items:center;background:#fff8eec7;border:1px solid #fff9e8;border-radius:31px;box-shadow:0 15px 33px #997a6b40;font-size:65px;transform:rotate(-6deg)}
+.phone-lock h2{font:normal 41px/1.11 Georgia,serif;letter-spacing:-.045em;color:#6d5051;margin:24px 0 8px}
+.phone-lock h2 em{color:#a16b73;font-weight:400}
+.phone-lock p{font-size:12px;color:#785f5c;line-height:1.7}
+#phoneUnlock{margin-top:25px;border:1px solid #74565a;border-radius:99px;padding:14px 22px;background:#715359;color:#fff8f3;font-size:13px;font-weight:650;box-shadow:0 7px 20px #6f4e4b3f}
+#phoneUnlock span{margin-left:9px}
+.phone-lock-bottom{margin-top:auto;font-size:9px;letter-spacing:.18em;color:#8a6c65;padding-top:30px}
+.os-modal .os-dialog{border-radius:30px;border:6px solid #795d5a;width:min(420px,96vw);max-height:min(780px,90dvh);box-shadow:0 30px 85px #36242088}
+.os-modal .os-dialog-head{padding:16px 21px}
+.os-modal .os-dialog-body{padding:24px}
+.os-modal{z-index:90}
+@media(max-width:1140px){.phone-presentation{grid-template-columns:minmax(0,1fr) 405px minmax(0,.65fr);gap:17px}.phone-editorial h1{font-size:44px}.phone-editorial-right .phone-side-card{padding:14px 0}}
+@media(max-width:950px){.phone-presentation{grid-template-columns:minmax(0,1fr) 405px}.phone-editorial-right{display:none}}
+@media(max-width:670px){
+  body{background:#f4e1d5}
+  .ifa-os{padding:0;margin:0;max-width:100%}
+  .phone-presentation{display:block;min-height:0}
+  .phone-editorial{display:none}
+  .phone-frame{width:100%;max-width:100%;min-height:0;height:100dvh;border:0;border-radius:0;padding:0;box-shadow:none}
+  .phone-frame::before,.phone-frame::after{display:none}
+  .phone-screen{border-radius:0}
+  .phone-status{padding-top:max(12px,env(safe-area-inset-top));height:max(44px,calc(32px + env(safe-area-inset-top)))}
+  .phone-home{padding-top:22px}
+  .phone-controlbar{padding-bottom:max(8px,env(safe-area-inset-bottom))}
+  .os-modal{padding:0}
+  .os-modal .os-dialog{width:100%;height:100dvh;max-height:100dvh;border:0;border-radius:0}
+  .os-modal .os-dialog-body{flex:1}
+}
+@media(max-width:360px){.phone-home{padding-left:14px;padding-right:14px}.phone-headline strong{font-size:40px}.phone-app-grid{gap:14px 5px}.phone-app-icon{height:54px;border-radius:15px}.phone-dock .phone-app-icon{height:47px;width:47px}.phone-app-name{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.phone-app,.phone-lock{transition:none!important}}
