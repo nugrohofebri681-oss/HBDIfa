@@ -113,3 +113,14 @@ body{background:radial-gradient(circle at 9% 20%,#ecd9d7,#f4ecdf 41%,#eadbcc 100
 #ifaOS .phone-page[hidden]{display:none!important}
 @media(min-width:671px){.phone-frame{margin-block:18px}}
 @media(max-width:670px){#app.app{min-height:100dvh}#ifaOS .phone-home{overscroll-behavior-y:contain}}
+
+/* Apps open as phone-sized windows rather than expanding into a desktop panel. */
+.modal-root{z-index:88!important;padding:16px!important}
+.modal-root .window{width:min(430px,100%)!important;height:min(810px,94dvh)!important;max-height:94dvh!important;border:6px solid #715852!important;border-radius:30px!important;box-shadow:0 35px 95px #382a2a99!important}
+.modal-root .window-top{padding:16px 18px}
+.modal-root .window-body{padding:23px 19px 28px;scrollbar-width:thin}
+@media(max-width:670px){
+.modal-root{padding:0!important}
+.modal-root .window{width:100%!important;height:100dvh!important;max-height:100dvh!important;border:0!important;border-radius:0!important}
+.modal-root .window-body{padding:21px 17px 28px}
+}
