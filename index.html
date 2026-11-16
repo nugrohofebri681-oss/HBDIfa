@@ -130,6 +130,7 @@
 @media(max-width:540px){.projector-window .film-still{object-position:center}.projector-window .film-still-offline{padding:15px}.film-source-line{font-size:10px}.film-image-notice{font-size:10px}}
 </style>
 <link rel="stylesheet" href="./os.css">
+<link rel="stylesheet" href="./phone.css">
 </head>
 <body>
 <div id="app" class="app">
@@ -144,36 +145,29 @@
     </div>
   </header>
   
-<section class="ifa-os" id="ifaOS" aria-label="Ifa's Birthday OS dashboard">
- <div class="os-shell">
-  <div class="os-nav"><div class="os-logo">✿ IFA.OS <span style="font-weight:400">/ BIRTHDAY EDITION</span></div><div class="os-label">17 NOVEMBER 2026 · 29TH CHAPTER</div></div>
-  <div class="os-welcome">
-    <div><div class="os-eyebrow">✦ a little place in time · v4</div><h1>Hello,<br><em>Faa.</em> ♡</h1><p>Hehe.. selamat datang di ruang kecil yang aku siapin buat ulang tahunmu. Ada surat, cerita, film, kejutan kecil, dan beberapa hal random yang bisa kamu jelajahi kapan aja.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:23px"><button type="button" class="os-action" data-open="letter">💌 Baca surat ulang tahun ↗</button><button type="button" class="os-action" style="background:#fff9f2;color:#775b55;border-color:#dbbfb8" data-mini="mood">☁️ Gimana harimu?</button></div></div>
-    <div class="os-card-art" aria-hidden="true"><span class="os-card-icon">💌</span><small>ONE LITTLE BIRTHDAY WORLD · 2026</small></div>
+<section class="ifa-os" id="ifaOS" aria-label="Ifa's Birthday OS, a personal mini phone">
+<div class="phone-presentation">
+  <div class="phone-editorial phone-editorial-left"><div class="phone-kicker">A BIRTHDAY EDITION · 001</div><h1>A little<br><em>place in time.</em></h1><p>Untuk Ifa, di ulang tahun ke-29. Satu tempat kecil untuk surat, cerita, kenangan film, dan hal-hal baik lainnya.</p><div class="phone-editorial-line">17 NOVEMBER 2026 <span>✦</span> MADE WITH CARE</div></div>
+  <div class="phone-frame" id="phoneFrame">
+    <div class="phone-screen">
+      <div class="phone-wallpaper" aria-hidden="true"><span></span><i></i><b></b></div>
+      <div class="phone-status"><time id="phoneClock">09:41</time><span class="phone-island" aria-hidden="true"></span><span class="phone-status-icons" aria-label="Wi-Fi dan baterai">▂▅▇ ᯤ ▰</span></div>
+      <div class="phone-home" id="phoneHome">
+        <div class="phone-headline"><span>MONDAY, NOV 17 2026</span><strong>Hello, Faa. <em>♡</em></strong><small>Welcome to your little birthday world.</small></div>
+        <button class="phone-notification" type="button" data-open="letter"><span class="phone-notif-emoji">✉️</span><span><strong>1 special letter waiting</strong><small>Mmm.. ada sesuatu buat kamu, hehe..</small></span><span aria-hidden="true">›</span></button>
+        <div class="phone-section-row"><span id="phonePageLabel">Your little apps</span><span id="osProgress">0 / 14 explored</span></div>
+        <div class="phone-page phone-page-active" data-page="0"><div class="phone-app-grid"><button class="phone-app" type="button" data-open="letter"><span class="phone-app-icon phone-letter">💌</span><span class="phone-app-name">Birthday Letter</span><small>a special one</small></button><button class="phone-app" type="button" data-open="cinema"><span class="phone-app-icon phone-cinema">🎞️</span><span class="phone-app-name">Little Cinema</span><small>two films</small></button><button class="phone-app" type="button" data-open="openwhen"><span class="phone-app-icon phone-openwhen">✉️</span><span class="phone-app-name">Open When</span><small>six letters</small></button><button class="phone-app" type="button" data-open="keepsake"><span class="phone-app-icon phone-keepsake">🎁</span><span class="phone-app-name">Keepsakes</span><small>memories</small></button><button class="phone-app" type="button" data-open="chapters"><span class="phone-app-icon phone-chapters">📖</span><span class="phone-app-name">Chapters</span><small>little notes</small></button><button class="phone-app" type="button" data-open="wish"><span class="phone-app-icon phone-wish">🌼</span><span class="phone-app-name">Last Wish</span><small>from me</small></button><button class="phone-app" type="button" data-mini="comfort"><span class="phone-app-icon phone-comfort">☁️</span><span class="phone-app-name">Comfort</span><small>slow days</small></button><button class="phone-app" type="button" data-mini="laugh"><span class="phone-app-icon phone-laugh">😄</span><span class="phone-app-name">Laugh</span><small>for smiles</small></button></div></div>
+        <div class="phone-page" data-page="1" hidden><div class="phone-app-grid"><button class="phone-app" type="button" data-mini="mood"><span class="phone-app-icon phone-mood">🌤️</span><span class="phone-app-name">Mood Check</span><small>how are you?</small></button><button class="phone-app" type="button" data-mini="random"><span class="phone-app-icon phone-random">🎲</span><span class="phone-app-name">Random</span><small>little notes</small></button><button class="phone-app" type="button" data-mini="wishlab"><span class="phone-app-icon phone-wishlab">✨</span><span class="phone-app-name">Wish Lab</span><small>choose a wish</small></button><button class="phone-app" type="button" data-mini="game"><span class="phone-app-icon phone-game">🎮</span><span class="phone-app-name">Game Center</span><small>play a bit</small></button><button class="phone-app" type="button" data-mini="achieve"><span class="phone-app-icon phone-achieve">🏅</span><span class="phone-app-name">Achievements</span><small>your badges</small></button><button class="phone-app" type="button" data-mini="secret"><span class="phone-app-icon phone-secret">🔒</span><span class="phone-app-name">Secret Room</span><small>7 of 14 visits</small></button></div><p class="phone-unlock-note" id="osSecretHint">🔒 Secret Room opens automatically after 7 of 14 apps are explored.</p></div>
+      </div>
+      <div class="phone-dock"><div class="phone-dock-grid"><button class="phone-app" type="button" data-open="letter"><span class="phone-app-icon phone-letter">💌</span><span class="phone-app-name">Letter</span></button><button class="phone-app" type="button" data-open="cinema"><span class="phone-app-icon phone-cinema">🎞️</span><span class="phone-app-name">Cinema</span></button><button class="phone-app" type="button" data-mini="comfort"><span class="phone-app-icon phone-comfort">☁️</span><span class="phone-app-name">Comfort</span></button><button class="phone-app" type="button" data-mini="mood"><span class="phone-app-icon phone-mood">🌤️</span><span class="phone-app-name">Mood</span></button></div></div>
+      <div class="phone-controlbar"><div class="phone-page-controls"><button type="button" id="phonePrev" aria-label="Halaman aplikasi sebelumnya">‹</button><button class="phone-page-dot active" type="button" data-phone-page="0" aria-label="Halaman aplikasi 1"></button><button class="phone-page-dot" type="button" data-phone-page="1" aria-label="Halaman aplikasi 2"></button><button type="button" id="phoneNext" aria-label="Halaman aplikasi berikutnya">›</button></div><button class="phone-homebar" type="button" id="phoneHomeButton" aria-label="Kembali ke layar utama"></button></div>
+      <div class="phone-lock" id="phoneLock" aria-label="Layar kunci Ifa OS">
+        <div class="phone-lock-spacer"></div><div class="phone-lock-date">17 November 2026</div><div class="phone-lock-time" id="phoneLockTime">09:41</div><div class="phone-lock-icon">💌</div><h2>Happy Birthday,<br><em>Faa.</em></h2><p>A little place in time, just for you.</p><button type="button" id="phoneUnlock">Buka hadiahmu <span aria-hidden="true">↑</span></button><div class="phone-lock-bottom">♡ MADE WITH CARE · YOUR 29TH CHAPTER</div>
+      </div>
+    </div>
   </div>
-  <div class="os-metrics"><div class="os-metric"><span class="os-metric-icon">🌷</span><div><b>For your 29th chapter</b><small>A birthday edition</small></div></div><div class="os-metric"><span class="os-metric-icon">☁️</span><div><b id="osMood">belum dicek</b><small>Today's mood</small></div></div><div class="os-metric"><span class="os-metric-icon">✦</span><div><b id="osProgress">0 / 14 explored</b><small>Little discoveries</small></div></div></div>
-  <div class="os-section-heading"><h2>How are you feeling?</h2><p>Quick shortcuts, no pressure.</p></div>
-  <div class="os-quick"><button data-mini="mood" type="button"><span>🌿</span>Mood Check</button><button data-mini="comfort" type="button"><span>☁️</span>Butuh tenang</button><button data-mini="laugh" type="button"><span>😌</span>Pengen senyum</button><button data-mini="random" type="button"><span>🎲</span>Surprise me</button><button data-mini="wishlab" type="button"><span>✨</span>Make a wish</button></div>
-  <div class="os-section-heading"><h2>Your little apps</h2><p>Tap to open a memory or a mini experience.</p></div>
-  <div class="os-grid">
-   <button class="os-tile featured" type="button" data-open="letter"><span class="os-icon">💌</span><b>Birthday Letter</b><small>for you</small></button>
-   <button class="os-tile" type="button" data-open="cinema"><span class="os-icon">🎞️</span><b>Little Cinema</b><small>2 films</small></button>
-   <button class="os-tile" type="button" data-open="chapters"><span class="os-icon">📖</span><b>Little Chapters</b><small>notes</small></button>
-   <button class="os-tile" type="button" data-open="openwhen"><span class="os-icon">✉️</span><b>Open When...</b><small>6 letters</small></button>
-   <button class="os-tile" type="button" data-open="keepsake"><span class="os-icon">🎁</span><b>Keepsake Box</b><small>6 memories</small></button>
-   <button class="os-tile" type="button" data-open="wish"><span class="os-icon">🌼</span><b>One Last Wish</b><small>a blessing</small></button>
-   <button class="os-tile" type="button" data-mini="comfort"><span class="os-icon">☁️</span><b>Comfort Mode</b><small>take it slow</small></button>
-   <button class="os-tile" type="button" data-mini="laugh"><span class="os-icon">😄</span><b>Laugh Machine</b><small>little jokes</small></button>
-   <button class="os-tile" type="button" data-mini="random"><span class="os-icon">🎲</span><b>Random Thing</b><small>surprise</small></button>
-   <button class="os-tile" type="button" data-mini="wishlab"><span class="os-icon">🕊️</span><b>Wish Lab</b><small>little hopes</small></button>
-   <button class="os-tile" type="button" data-mini="game"><span class="os-icon">🎮</span><b>Game Center</b><small>memory match</small></button>
-   <button class="os-tile" type="button" data-mini="achieve"><span class="os-icon">🏅</span><b>Achievements</b><small>little wins</small></button>
-   <button class="os-tile" type="button" data-mini="mood"><span class="os-icon">🌤️</span><b>Mood Check</b><small>check in</small></button>
-   <button class="os-tile" type="button" data-mini="secret"><span class="os-icon">🔐</span><b>Secret Room</b><small id="osSecretHint">Unlock at 6 visits</small></button>
-  </div>
-  <div class="os-footnote"><span>✦ 17 / 11 / 2026 · made with care, for Ifa · <span id="osClock">--:--</span></span><button id="osShowOriginal" type="button">Lihat tampilan album sebelumnya ↗</button></div>
- </div><div class="os-bottomline">♡ A LITTLE SPACE TO REVISIT, ANYTIME.</div>
-</section>
+  <div class="phone-editorial phone-editorial-right"><div class="phone-kicker">A FEW LITTLE THINGS</div><div class="phone-side-card"><span>✉️</span><strong>The letter</strong><small>Hadiah utamanya ada di sini.</small></div><div class="phone-side-card"><span>🎞️</span><strong>The memories</strong><small>Film, buku, dan cerita kecil.</small></div><div class="phone-side-card"><span>🔒</span><strong>The secret</strong><small>Terbuka setelah 7 dari 14 aplikasi dijelajahi. Letaknya di halaman kedua.</small></div><button type="button" id="osShowOriginal" class="phone-original-link">Lihat album versi lama ↗</button><button type="button" id="phoneReplayIntro" class="phone-original-link">Ulangi pembuka ✦</button></div>
+</div></section>
 <main id="top">
     <section class="hero" aria-labelledby="heroTitle">
       <div>
