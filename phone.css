@@ -124,3 +124,18 @@ body{background:radial-gradient(circle at 9% 20%,#ecd9d7,#f4ecdf 41%,#eadbcc 100
 .modal-root .window{width:100%!important;height:100dvh!important;max-height:100dvh!important;border:0!important;border-radius:0!important}
 .modal-root .window-body{padding:21px 17px 28px}
 }
+
+/* Lock Screen shortcut: visible on the home screen, matching the vintage phone design. */
+.phone-lock-shortcut{
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  width:max-content;max-width:100%;margin:0 0 8px auto;
+  padding:6px 12px;border:1px solid #c99ea0;border-radius:999px;
+  background:#fffaf2c8;backdrop-filter:blur(6px);
+  color:#765457;font-size:10px;font-weight:750;letter-spacing:.045em;
+  box-shadow:0 3px 12px #94716c18;
+  transition:transform .18s ease,background .18s ease;
+}
+.phone-lock-shortcut:hover{background:#fff9f3;transform:translateY(-1px)}
+.phone-lock-shortcut:active{transform:scale(.98)}
+.phone-lock-shortcut span{font-size:12px}
+@media(prefers-reduced-motion:reduce){.phone-lock-shortcut{transition:none}}
