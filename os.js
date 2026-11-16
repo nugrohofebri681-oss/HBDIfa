@@ -36,7 +36,7 @@
     'Satu pertanyaan random: kalau hari ini dijadikan judul film, kira-kira judulnya apa ya? Hehe..',
     'Semoga kamu punya waktu buat diri sendiri di sela-sela hal yang harus dikerjakan.',
     'Pengingat kecil: merayakan pencapaian sederhana itu juga boleh.',
-    'Kalau suatu saat pengen cerita, kamu tau kan kita masih bisa ngobrol sebagai teman. Tanpa harus ada alasan khusus.',
+    'Semoga kenangan yang baik tetap bisa disimpan sebagai hal yang baik, tanpa harus mengulang apa pun.',
     'Buat hari ini: semoga ada hal baik datang tanpa harus dicari terlalu jauh.'
   ];
   const wishes={
@@ -53,7 +53,7 @@
     const n=count();
     const el=one('#osProgress');if(el)el.textContent=n+' / '+total()+' explored';
     const mm=one('#osMood');if(mm)mm.textContent=mood?({tenang:'tenang',capek:'capek',berat:'sedikit berat',biasa:'biasa aja',senang:'senang'}[mood]||mood):'belum dicek';
-    const secret=one('#osSecretHint');if(secret)secret.textContent=n>=6?'A little secret ✦':'Unlock at 6 visits';
+    const secret=one('#osSecretHint');if(secret)secret.textContent=n>=7?'🗝️ Secret Room unlocked!':'🔒 Secret Room · '+n+'/7 apps explored';
     const clock=one('#osClock');if(clock)clock.textContent=new Intl.DateTimeFormat('id-ID',{hour:'2-digit',minute:'2-digit'}).format(new Date());
   }
   function header(k,t,sub){return '<div class="os-eyebrow">'+k+'</div><h2>'+t+'</h2><p>'+sub+'</p>'}
@@ -104,8 +104,7 @@
       h=header('07 / Small milestones','Achievements','Ini bukan lomba yaa. Cuma jejak kecil dari ruang-ruang yang sudah kamu kunjungi.');
       h+='<div class="os-badge-list">'+badges.map(x=>'<div class="os-badge '+(x[2]?'':'locked')+'"><span class="os-emblem">'+x[0]+'</span><div><b>'+x[1]+'</b><small>'+(x[2]?'Unlocked ✦':'Belum terbuka')+'</small></div></div>').join('')+'</div>';
     }else if(current==='secret'){
-      h=header('08 / A hidden place','A tiny secret','Kamu sudah menemukan ruang kecil yang sengaja disimpan buat yang penasaran, hehe.');
-      h+=panel('<strong>Ini bukan teka-teki besar.</strong><p>Terima kasih udah mau menjelajahi hal-hal kecil di sini, Faa. Semoga hadiah sederhana ini bisa jadi salah satu alasan kecil buat tersenyum di ulang tahunmu. 🤍</p>')+btn('Lihat surat utamanya ↗','letter');
+      h=count()<7?header('08 / The hidden corner','Secret Room · masih terkunci','Ruang ini ada di halaman aplikasi kedua, jadi kamu ga perlu mencari lokasinya, hehe.')+panel('<strong>🔒 '+count()+' dari 7 aplikasi</strong><p>Jelajahi tujuh aplikasi berbeda dari empat belas yang tersedia, lalu semua kejutan terkunci terbuka otomatis. Ga harus menyelesaikan game atau membaca semua surat.</p>')+btn('Kembali ke home','close'):header('08 / A hidden place','A tiny secret','Yeayyy, kamu sudah membuka ruang kecil yang sengaja kusimpan buat yang penasaran, hehe.')+panel('<strong>Ini bukan teka-teki besar.</strong><p>Terima kasih udah mau menjelajahi hal-hal kecil di sini, Faa. Semoga hadiah sederhana ini bisa jadi salah satu alasan kecil buat tersenyum di ulang tahunmu. 🤍</p>')+btn('Lihat surat utamanya ↗','letter');
     }
     box.innerHTML=h;
   }
@@ -117,10 +116,10 @@
   }
   function open(id){
     if(!names[id])return;
-    if(id==='secret'&&count()<6){alert('Psst.. ruang ini terbuka setelah kamu menjelajahi 6 aplikasi. Coba cari beberapa kenangan dulu yaa, hehe.');return}
+    
     if(!modal.classList.contains('visible'))lastFocus=document.activeElement;
     current=id;
-    if(!osSeen.includes(id)){osSeen.push(id);store.set('ifaos_os_seen',JSON.stringify(osSeen))}
+    if(!(id==='secret'&&count()<7)&&!osSeen.includes(id)){osSeen.push(id);store.set('ifaos_os_seen',JSON.stringify(osSeen))}
     if(id==='game'&&gameCards.length===0)resetGame();
     render();
     modal.classList.add('visible');
