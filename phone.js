@@ -44,7 +44,7 @@ q('#phoneHomeButton')?.addEventListener('click',()=>{
   const mini=q('.os-modal.visible');
   if(mini)mini.querySelector('[data-os-action="close"]')?.click();
   const older=q('#modalRoot');
-  if(older&&!older.classList.contains('hidden') && older.classList.contains('visible'))q('#closeBtn')?.click();
+  if(older&&older.classList.contains('open'))q('#closeBtn')?.click();
   showPage(0);
 });
 let start=null;
