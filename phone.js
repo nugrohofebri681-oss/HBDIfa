@@ -3,7 +3,6 @@
 const q=s=>document.querySelector(s),qa=s=>[...document.querySelectorAll(s)];
 const phone=q('#phoneFrame'),lock=q('#phoneLock'),unlock=q('#phoneUnlock');
 if(!phone||!lock||!unlock)return;
-const sess={get(k){try{return sessionStorage.getItem(k)}catch{return null}},set(k,v){try{sessionStorage.setItem(k,v)}catch{}}};
 let page=0;
 function clock(){
   const now=new Date();
@@ -18,10 +17,21 @@ function unlocked(){
   lock.classList.add('hidden-unlocked');
   lock.setAttribute('aria-hidden','true');
   if('inert' in lock)lock.inert=true;
-  sess.set('ifaos_phone_unlocked','1');
+}
+function lockAgain(){
+  // Return to a clean birthday lock screen without resetting visited apps.
+  lock.removeAttribute('aria-hidden');
+  if('inert' in lock)lock.inert=false;
+  lock.classList.remove('hidden-unlocked');
+  lock.scrollTop=0;
+  const home=q('#phoneHome');if(home)home.scrollTop=0;
+  // Keep keyboard focus inside the lock screen once it is visible.
+  unlock.focus({preventScroll:true});
 }
 unlock.addEventListener('click',unlocked);
-if(sess.get('ifaos_phone_unlocked')==='1')unlocked();
+q('#phoneLockAgain')?.addEventListener('click',lockAgain);
+// The lock screen intentionally starts locked on every fresh page load,
+// including reloads; only exploration progress persists in localStorage.
 function showPage(next){
   page=Math.max(0,Math.min(1,next));
   qa('.phone-page').forEach(el=>{
