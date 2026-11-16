@@ -93,13 +93,14 @@
       h+=matched.length===6?panel('<strong>Yeayyy, berhasil! 🎉</strong><p>Semoga setelah ini harimu juga punya banyak kejutan baik yaa, Faa..</p>')+btn('Main lagi ↻','resetGame'):btn('Acak kartu lagi ↻','resetGame');
     }else if(current==='achieve'){
       const core=coreSeen();
+      const everythingOpen=count()>=7;
       const badges=[
-        ['✉️','A Letter Opened',core.includes('letter')],
-        ['🎞️','Movie Memory',core.includes('cinema')],
-        ['☁️','A Little Pause',osSeen.includes('comfort')],
-        ['📦','Keepsake Explorer',core.includes('keepsake')],
-        ['🎮','Mini Gamer',gameWon],
-        ['✦','Curious Soul',count()>=6]
+        ['✉️','A Letter Opened',(everythingOpen||core.includes('letter'))],
+        ['🎞️','Movie Memory',(everythingOpen||core.includes('cinema'))],
+        ['☁️','A Little Pause',(everythingOpen||osSeen.includes('comfort'))],
+        ['📦','Keepsake Explorer',(everythingOpen||core.includes('keepsake'))],
+        ['🎮','Mini Gamer',(everythingOpen||gameWon)],
+        ['✦','Curious Soul',count()>=7]
       ];
       h=header('07 / Small milestones','Achievements','Ini bukan lomba yaa. Cuma jejak kecil dari ruang-ruang yang sudah kamu kunjungi.');
       h+='<div class="os-badge-list">'+badges.map(x=>'<div class="os-badge '+(x[2]?'':'locked')+'"><span class="os-emblem">'+x[0]+'</span><div><b>'+x[1]+'</b><small>'+(x[2]?'Unlocked ✦':'Belum terbuka')+'</small></div></div>').join('')+'</div>';
