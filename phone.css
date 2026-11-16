@@ -104,3 +104,12 @@ body{background:radial-gradient(circle at 9% 20%,#ecd9d7,#f4ecdf 41%,#eadbcc 100
 }
 @media(max-width:360px){.phone-home{padding-left:14px;padding-right:14px}.phone-headline strong{font-size:40px}.phone-app-grid{gap:14px 5px}.phone-app-icon{height:54px;border-radius:15px}.phone-dock .phone-app-icon{height:47px;width:47px}.phone-app-name{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.phone-app,.phone-lock{transition:none!important}}
+
+/* Full focus on the phone; the earlier editorial page remains available from its archive link. */
+.topbar{display:none!important}
+.footer{display:none!important}
+#app.app{min-height:100vh}
+#ifaOS .phone-original-link:focus-visible,#ifaOS button:focus-visible{outline:3px solid #8b5f74;outline-offset:3px}
+#ifaOS .phone-page[hidden]{display:none!important}
+@media(min-width:671px){.phone-frame{margin-block:18px}}
+@media(max-width:670px){#app.app{min-height:100dvh}#ifaOS .phone-home{overscroll-behavior-y:contain}}
