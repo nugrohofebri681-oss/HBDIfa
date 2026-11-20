@@ -139,3 +139,25 @@ body{background:radial-gradient(circle at 9% 20%,#ecd9d7,#f4ecdf 41%,#eadbcc 100
 .phone-lock-shortcut:active{transform:scale(.98)}
 .phone-lock-shortcut span{font-size:12px}
 @media(prefers-reduced-motion:reduce){.phone-lock-shortcut{transition:none}}
+
+
+/* Soft instrumental player controls; visible on lock, home, and open apps. */
+.phone-quick-controls{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 13px}
+.phone-quick-controls .phone-lock-shortcut{margin:0}
+.phone-music-toggle{display:inline-flex;align-items:center;justify-content:center;gap:5px;
+  padding:7px 11px;border:1px solid #cba7a4;border-radius:999px;background:#fffaf1ce;
+  color:#76545c;font-size:10px;font-weight:750;letter-spacing:.015em;
+  box-shadow:0 5px 15px #6b4a4415;transition:background .2s,transform .2s}
+.phone-music-toggle:hover{background:#fffaf5;transform:translateY(-1px)}
+.phone-music-toggle:focus-visible,.music-dialog-button:focus-visible{outline:3px solid #8b5f74;outline-offset:2px}
+.phone-lock-music{margin-top:13px;padding:9px 17px;background:#fff8f0b5;font-size:11px;z-index:2}
+.music-dialog-button{height:34px;min-width:34px;padding:0 6px;border-radius:10px;border:1px solid #d9bfbb;
+  background:#fff8f3;color:#885c66;font-size:18px;line-height:1;cursor:pointer;
+  flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center}
+.music-dialog-button:hover{background:#ead7d2}
+.os-dialog-head .music-dialog-button{margin-left:auto;margin-right:9px}
+@media(max-width:360px){
+  .phone-quick-controls{gap:4px}
+  .phone-music-toggle,.phone-quick-controls .phone-lock-shortcut{padding:6px 8px;font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){.phone-music-toggle{transition:none}}
