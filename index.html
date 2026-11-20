@@ -153,7 +153,7 @@
       <div class="phone-wallpaper" aria-hidden="true"><span></span><i></i><b></b></div>
       <div class="phone-status"><time id="phoneClock">09:41</time><span class="phone-island" aria-hidden="true"></span><span class="phone-status-icons" aria-label="Wi-Fi dan baterai">▂▅▇ ᯤ ▰</span></div>
       <div class="phone-home" id="phoneHome">
-        <button type="button" id="phoneLockAgain" class="phone-lock-shortcut" title="Kembali ke layar kunci" aria-label="Kunci layar lagi"><span aria-hidden="true">🔒</span> Lock Screen</button>
+        <div class="phone-quick-controls"><button type="button" class="phone-music-toggle" data-music-toggle aria-label="Aktifkan atau matikan musik latar" aria-pressed="true">♫ Musik siap</button><button type="button" id="phoneLockAgain" class="phone-lock-shortcut" title="Kembali ke layar kunci" aria-label="Kunci layar lagi"><span aria-hidden="true">🔒</span> Lock Screen</button></div>
         <div class="phone-headline"><span>TUESDAY, 17 NOV 2026</span><strong>Hello, Faa. <em>♡</em></strong><small>Welcome to your little birthday world.</small></div>
         <button class="phone-notification" type="button" data-open="letter"><span class="phone-notif-emoji">✉️</span><span><strong>1 special letter waiting</strong><small>Mmm.. ada sesuatu buat kamu, hehe..</small></span><span aria-hidden="true">›</span></button>
         <div class="phone-section-row"><span id="phonePageLabel">Your little apps</span><span id="osProgress">0 / 14 explored</span></div>
@@ -163,7 +163,7 @@
       <div class="phone-dock"><div class="phone-dock-grid"><button class="phone-app" type="button" data-open="letter"><span class="phone-app-icon phone-letter">💌</span><span class="phone-app-name">Letter</span></button><button class="phone-app" type="button" data-open="cinema"><span class="phone-app-icon phone-cinema">🎞️</span><span class="phone-app-name">Cinema</span></button><button class="phone-app" type="button" data-mini="comfort"><span class="phone-app-icon phone-comfort">☁️</span><span class="phone-app-name">Comfort</span></button><button class="phone-app" type="button" data-mini="mood"><span class="phone-app-icon phone-mood">🌤️</span><span class="phone-app-name">Mood</span></button></div></div>
       <div class="phone-controlbar"><div class="phone-page-controls"><button type="button" id="phonePrev" aria-label="Halaman aplikasi sebelumnya">‹</button><button class="phone-page-dot active" type="button" data-phone-page="0" aria-label="Halaman aplikasi 1"></button><button class="phone-page-dot" type="button" data-phone-page="1" aria-label="Halaman aplikasi 2"></button><button type="button" id="phoneNext" aria-label="Halaman aplikasi berikutnya">›</button></div><button class="phone-homebar" type="button" id="phoneHomeButton" aria-label="Kembali ke layar utama"></button></div>
       <div class="phone-lock" id="phoneLock" aria-label="Layar kunci Ifa OS">
-        <div class="phone-lock-spacer"></div><div class="phone-lock-date">17 November 2026</div><div class="phone-lock-time" id="phoneLockTime">09:41</div><div class="phone-lock-icon">💌</div><h2>Happy Birthday,<br><em>Faa.</em></h2><p>A little place in time, just for you.</p><button type="button" id="phoneUnlock">Buka hadiahmu <span aria-hidden="true">↑</span></button><div class="phone-lock-bottom">♡ MADE WITH CARE · YOUR 29TH CHAPTER</div>
+        <div class="phone-lock-spacer"></div><div class="phone-lock-date">17 November 2026</div><div class="phone-lock-time" id="phoneLockTime">09:41</div><div class="phone-lock-icon">💌</div><h2>Happy Birthday,<br><em>Faa.</em></h2><p>A little place in time, just for you.</p><button type="button" id="phoneUnlock">Buka hadiahmu <span aria-hidden="true">↑</span></button><button type="button" class="phone-music-toggle phone-lock-music" data-music-toggle aria-label="Aktifkan atau matikan musik latar" aria-pressed="true">♫ Musik siap</button><div class="phone-lock-bottom">♡ MADE WITH CARE · YOUR 29TH CHAPTER</div>
       </div>
     </div>
   </div>
@@ -331,6 +331,7 @@ boot();
 </script>
 <script src="./os.js" defer></script>
 <script src="./phone.js" defer></script>
+<script src="./music.js" defer></script>
 <script>document.getElementById("osShowOriginal")?.addEventListener("click",function(){var el=document.getElementById("top");el.style.display="block";el.scrollIntoView({behavior:"smooth"});this.textContent="Album lama terbuka ✓";});</script>
 </body>
 </html>
